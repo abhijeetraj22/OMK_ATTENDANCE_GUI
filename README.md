@@ -22,19 +22,13 @@ A complete automated attendance processing system built using <b>Python + Tkinte
 
 ---
 
-# 🎥 Live Demo (Animated GIF)
-
-> Replace this GIF with your actual recorded screen:
-> Save your GIF as: `docs/demo.gif`
-
-
----
-
 # 🧩 Overview
 
-The **OMK Attendance Processing Tool** provides an easy-to-use GUI workflow to automate attendance generation:
+**OMK Attendance Processing System** is a **GUI-based automated attendance checker** built using Python, Tkinter, and Pandas.
+It processes daily attendance sheets from **teachers, admin staff, transport, guard and 4th grade**, applies **grace logic**, finds missing entries, and generates clean Excel/CSV reports instantly.
 
-✔ Import Admin & Teacher attendance files  
+✔ Import attendance raw data files  
+✔ Import Admin & Teacher Supervision data files   
 ✔ Auto-detect sheets & show as dropdown  
 ✔ Apply **grace-time rules**  
 ✔ Detect late arrival  
@@ -44,51 +38,54 @@ The **OMK Attendance Processing Tool** provides an easy-to-use GUI workflow to a
 
 ---
 
-# 🏗 UML Workflow Diagram
+# 🧩 UML Workflow Diagram
 
-## 1️⃣ ASCII UML (text GitHub view)
-            ┌────────────────────┐
-            │  Start Application │
-            └─────────┬──────────┘
-                      │
-            ┌─────────▼──────────┐
-            │  User Selects File │
-            └─────────┬──────────┘
-                      │
-            ┌─────────▼──────────┐
-            │ Load Sheets + Show  │
-            │      Dropdown       │
-            └─────────┬──────────┘
-                      │
-            ┌─────────▼──────────┐
-            │ Configure Grace Time│
-            └─────────┬──────────┘
-                      │
-            ┌─────────▼──────────┐
-            │ Process Attendance  │
-            │   (Pandas Logic)    │
-            └─────────┬──────────┘
-                      │
-            ┌─────────▼──────────┐
-            │ Error Handling +    │
-            │ Data Validation     │
-            └─────────┬──────────┘
-                      │
-            ┌─────────▼──────────┐
-            │   Export Output     │
-            │ (CSV / XLSX files)  │
-            └─────────┬──────────┘
-                      │
-            ┌─────────▼──────────┐
-            │      Complete       │
-            └─────────────────────┘
+
+## 📌 ASCII Version
+            ┌──────────────────────────┐
+            │     Start Application    │
+            └─────────────┬────────────┘
+                          │
+            ┌─────────────▼─────────────┐
+            │  User Selects Excel File  │
+            │    (Admin + Teacher)      │
+            └─────┬──────────────┬──────┘
+                  │              │
+            ┌─────▼─────┐  ┌─────▼─────┐
+            │Load Sheets│  │Load Sheets│
+            └─────┬─────┘  └─────┬─────┘
+                  │              │
+            ┌─────▼──────────────▼───┐
+            │      Show Dropdown     │
+            └────────────┬───────────┘
+                         │
+            ┌────────────▼───────────┐
+            |   Apply Grace Logic    |
+            |   Format + Normalize   | 
+            |   Detect Late/Absent   | 
+            |         & MoT          | 
+            └────────────┬───────────┘
+                         │
+               ┌─────────▼──────────┐
+               │ Error Handling +   │
+               │ Data Validation    │
+               └─────────┬──────────┘
+                         │
+               ┌─────────▼──────────┐
+               │   Export Output    │
+               │ (CSV / XLSX files) │
+               └─────────┬──────────┘
+                         │
+               ┌─────────▼──────────┐
+               │      Complete      │
+               └────────────────────┘
 
 
 ---
 
-# 🧰 Features
+# 🧠 Features
 
-### 🔹 GUI (Tkinter)
+### 🖥 GUI (Tkinter)
 
 * Browse Excel files
 * Auto-detect & show sheet list
@@ -96,17 +93,29 @@ The **OMK Attendance Processing Tool** provides an easy-to-use GUI workflow to a
 * Run processing
 * Save output
 
-### 🔹 Attendance Processing
+### ⏱ Attendance Processing
 
 * Extract IN & OUT time
 * Convert inconsistent formats
 * Apply late-entry logic
 * Identify incorrect or missing entries
 
-### 🔹 Export Options
+### 📊 Export Options
 
 * `.csv` combined
 * `.xlsx` multi-sheet
+
+---
+
+## ⚙️ Tech Stack
+
+| Area       | Technologies                |
+| ---------- | --------------------------- |
+| Language   | Python                      |
+| GUI        | Tkinter                     |
+| Data       | Pandas                      |
+| File Types | Excel, CSV                  |
+| Packaging  | Windows executable optional |
 
 ---
 
@@ -115,12 +124,12 @@ The **OMK Attendance Processing Tool** provides an easy-to-use GUI workflow to a
 ```
 OMK-Attendance/
 │
-├── attendance_tool.py          # Main script
-├── /docs
-│    ├── demo.gif               # Animation for README
-│    ├── uml.png                # Optional diagram
-│    └── logo.png               # App logo
-├── requirements.txt
+├── OMK_ATTENDANCE_GUI.exe         # exemain_frame
+├── main_frame.py                  # GUI Main script
+├── omkAttendance.py               # CMD Main script
+├── OMK_ATTENDANCE_GUI.py          # 1st version attendance script
+├── OMK_ATTENDANCE_GUI_1.5.py      # latest version attendance script
+├── requirements.txt               # Dependencies
 └── README.md
 ```
 
@@ -140,6 +149,15 @@ cd OMK_ATTENDANCE_GUI
 ```bash
 pip install -r requirements.txt
 ```
+### `requirements.txt`
+
+```
+pandas
+openpyxl
+xlrd
+XlsxWriter
+tk
+```
 
 ### 3️⃣ Run the Tool
 
@@ -151,29 +169,35 @@ python attendance_tool.py
 
 # 🧪 Output Example
 
-| Employee ID | Name         | In Time | Out Time |  Late  |   MoT   | Attend  |
-| ----------- | ------------ | ------- | -------- |  ----  | ------- | ------- |
-| 1024        | Rohan Sharma | 07:55   | 15:04    |   ADV  |   TRN   | Present |
-| 1893        | Neha Verma   | 08:32   | 15:01    |   LATE |   SUP   | Present |
+| Employee ID | Name          | Role    | In Time | Out Time |  MoT | Att |  Late   | 
+| ----------- | ------------- | ------- |-------- | -------- | ---- | --- |  -----  |
+| 1024        | Rohan Sharma  | Teacher | 07:52   | 14:11    |  SUP |  PR | ON TIME |
+| 524         | Vishal Goswami| Teacher | 08:22   | 17:11    |  SUP |  PR | ADV     |
+| 5498        | Abhijeet Raj  | Admin   | 08:12   | 16:21    |  TRN |  PR | ON TIME |
+| 824         | Abhishek      | Guard   |   --    |   --     |  SUP |  AB |         | 
+| 1893        | Raju Verma    | Driver  | 08:32   | 15:01    |  SUP |  PR | LATE    |
+
 
 ---
 
 # 🧾 Grace Time Logic (Configurable)
 
 ```
-Arrival < 07:40   → On Time  
-07:40 – 08:00     → Adv  
->08:00            → Late
+Arrival < 08:15   → On Time  
+08:15 – 08:25     → Adv  
+>08:25            → Late
 ```
 
 ---
 
-# 🤝 Contributing
+# ⭐ What Makes This Tool Special?
 
-1. Fork
-2. Create branch
-3. Commit
-4. Open a PR
+✔ Zero manual data formatting  
+✔ Fully GUI driven  
+✔ Grace logic per school rules  
+✔ One-click Excel export  
+✔ Real-world tested  
+✔ Easy to deploy  
 
 ---
 
@@ -187,9 +211,9 @@ MIT License
 
 If you found this tool helpful:
 
-👉 **Star ⭐ the repo**
-👉 Share with team
-👉 Follow on GitHub
+👉 **Star ⭐ the repo**  
+👉 Share with team  
+👉 Follow on GitHub  
 
 ---
 
@@ -197,15 +221,19 @@ If you found this tool helpful:
 
 I can also generate:
 
-✔ Installer (.exe)
-✔ Packaging using PyInstaller
-✔ Modern UI (CustomTkinter)
-✔ Professional project logo PNG/SVG
-✔ Flowchart PNG
-✔ API integration
-✔ Windows Task Scheduler automation
+✔ Installer (.exe)  
+✔ Packaging using PyInstaller  
+✔ Modern UI (CustomTkinter)  
+✔ Professional project logo PNG/SVG  
+✔ Flowchart PNG  
+✔ API integration  
+✔ Windows Task Scheduler automation  
 
 Just tell me!
 
->08:00            → Absent
---- # 🤝 Contributing 1. Fork 2. Create branch 3. Commit 4. Open a PR --- # 📜 License MIT License --- # ⭐ Support the Project If you found this tool helpful: 👉 **Star ⭐ the repo** 👉 Share with team 👉 Follow on GitHub ---
+# 🌐 Connect With Me
+
+[<img src="https://img.icons8.com/bubbles/100/000000/linkedin.png" width="50">](https://www.linkedin.com/in/rajabhijeet22/)
+[<img src="https://img.icons8.com/bubbles/100/000000/github.png" width="50">](https://github.com/abhijeetraj22)
+[<img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" width="50">](https://www.instagram.com/abhijeet_raj_/)
+[<img src="https://img.icons8.com/bubbles/100/000000/twitter-circled.png" width="50">](https://twitter.com/abhijeet_raj_/)
