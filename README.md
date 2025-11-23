@@ -16,7 +16,6 @@ A complete automated attendance processing system built using <b>Python + Tkinte
 <img src="https://img.shields.io/badge/Platform-Windows-blue?logo=windows" />
 <img src="https://img.shields.io/github/license/abhijeetraj22/OMK_ATTENDANCE_GUI" />
 <img src="https://img.shields.io/github/stars/abhijeetraj22/OMK_ATTENDANCE_GUI?style=social" />
-<img src="https://img.shields.io/github/issues/abhijeetraj22/OMK_ATTENDANCE_GUI" />
 
 </p>
 
