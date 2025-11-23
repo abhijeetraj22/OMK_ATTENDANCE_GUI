@@ -217,20 +217,6 @@ If you found this tool helpful:
 
 ---
 
-## Want enhancements?
-
-I can also generate:
-
-✔ Installer (.exe)  
-✔ Packaging using PyInstaller  
-✔ Modern UI (CustomTkinter)  
-✔ Professional project logo PNG/SVG  
-✔ Flowchart PNG  
-✔ API integration  
-✔ Windows Task Scheduler automation  
-
-Just tell me!
-
 # 🌐 Connect With Me
 
 [<img src="https://img.icons8.com/bubbles/100/000000/linkedin.png" width="50">](https://www.linkedin.com/in/rajabhijeet22/)
