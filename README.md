@@ -158,6 +158,7 @@ OMK-Attendance/
 <p align="center">
   <img src="OMK_ATTENDANCE_GUI_IMAGE/B2.png" width="800">
 </p>
+
 ---
 
 # 🛠 Installation
