@@ -239,7 +239,7 @@ If you found this tool helpful:
 
 # 🌐 Connect With Me
 
-[<img src="https://img.icons8.com/bubbles/100/000000/linkedin.png" width="50">](https://www.linkedin.com/in/rajabhijeet22/)
-[<img src="https://img.icons8.com/bubbles/100/000000/github.png" width="50">](https://github.com/abhijeetraj22)
-[<img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" width="50">](https://www.instagram.com/abhijeet_raj_/)
-[<img src="https://img.icons8.com/bubbles/100/000000/twitter-circled.png" width="50">](https://twitter.com/abhijeet_raj_/)
+[<img src="https://img.icons8.com/bubbles/100/000000/linkedin.png" width="80">](https://www.linkedin.com/in/rajabhijeet22/)
+[<img src="https://img.icons8.com/bubbles/100/000000/github.png" width="80">](https://github.com/abhijeetraj22)
+[<img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" width="80">](https://www.instagram.com/abhijeet_raj_/)
+[<img src="https://img.icons8.com/bubbles/100/000000/twitter-circled.png" width="80">](https://twitter.com/abhijeet_raj_/)
