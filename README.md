@@ -37,7 +37,7 @@ It processes daily attendance sheets from **teachers, admin staff, transport, gu
 
 ---
 
-# 📘 UML Workflow Diagram
+# 📜 UML Workflow Diagram
 
 
 ## 📌 ASCII Version
@@ -224,12 +224,6 @@ Arrival < 08:15   → On Time
 ✔ One-click Excel export  
 ✔ Real-world tested  
 ✔ Easy to deploy  
-
----
-
-# 📜 License
-
-MIT License
 
 ---
 
