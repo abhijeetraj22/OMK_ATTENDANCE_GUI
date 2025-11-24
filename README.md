@@ -134,6 +134,32 @@ OMK-Attendance/
 
 ---
 
+# 🎞 **Preview**
+
+## 🖥️ Old Version
+
+<p float="left">
+  <img src="OMK_ATTENDANCE_GUI_IMAGE/A1.png" width="45%" />
+  <img src="OMK_ATTENDANCE_GUI_IMAGE/A2.png" width="45%" />
+</p>
+<p float="left">
+  <img src="OMK_ATTENDANCE_GUI_IMAGE/A4.png" width="45%" />
+  <img src="OMK_ATTENDANCE_GUI_IMAGE/A5.png" width="45%" />
+</p>
+<p align="center">
+  <img src="OMK_ATTENDANCE_GUI_IMAGE/A3.png" width="400">
+</p>
+
+## 🆕 Latest Version
+
+<p align="center">
+  <img src="OMK_ATTENDANCE_GUI_IMAGE/B1.png" width="800">
+</p>
+<p align="center">
+  <img src="OMK_ATTENDANCE_GUI_IMAGE/B2.png" width="800">
+</p>
+---
+
 # 🛠 Installation
 
 ### 1️⃣ Clone the Repo
