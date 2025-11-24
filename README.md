@@ -37,7 +37,7 @@ It processes daily attendance sheets from **teachers, admin staff, transport, gu
 
 ---
 
-# 🧩 UML Workflow Diagram
+# 📘 UML Workflow Diagram
 
 
 ## 📌 ASCII Version
